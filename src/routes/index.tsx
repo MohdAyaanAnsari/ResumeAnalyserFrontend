@@ -51,9 +51,9 @@ function App() {
       <section className="text-center mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-500 text-xs font-bold mb-6 border border-indigo-500/20">
           <Sparkles size={14} />
-          <span>LIVE NEURAL ENGINE</span>
+          <span>LIVE ENGINE</span>
         </div>
-        <h1 className="text-5xl md:text-6xl font-black tracking-tight text-[var(--text-main)] mb-6">
+        <h1 className="text-5xl md:text-6xl font-black tracking-tight text-(--text-main) mb-6">
           Optimize your <span className="text-indigo-500">Resume</span> <br />with Neural Analysis.
         </h1>
       </section>
@@ -65,12 +65,12 @@ function App() {
           {/* IDLE STATE */}
           {status === 'idle' && (
             <div className="relative group">
-              <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-[var(--border-color)] rounded-3xl cursor-pointer bg-[var(--card-bg)] hover:border-indigo-500/50 transition-all">
+              <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-(--border-color) rounded-3xl cursor-pointer bg-(--card-bg) hover:border-indigo-500/50 transition-all">
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <div className="p-4 bg-indigo-500/10 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
                     <Upload className="text-indigo-500" size={32} />
                   </div>
-                  <p className="mb-2 text-sm font-semibold text-[var(--text-main)]">Upload Resume (PDF)</p>
+                  <p className="mb-2 text-sm font-semibold text-(--text-main)">Upload Resume (PDF)</p>
                 </div>
                 <input type="file" className="hidden" onChange={handleFileUpload} accept=".pdf" />
               </label>
@@ -79,12 +79,12 @@ function App() {
 
           {/* PROCESSING STATE */}
           {status === 'processing' && (
-            <div className="flex flex-col items-center justify-center h-64 bg-[var(--card-bg)] rounded-3xl border border-[var(--border-color)] relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/10 to-transparent h-20 w-full animate-scan" />
+            <div className="flex flex-col items-center justify-center h-64 bg-(--card-bg) rounded-3xl border border-(--border-color) relative overflow-hidden">
+              <div className="absolute inset-0 bg-linear-to-b from-transparent via-indigo-500/10 to-transparent h-20 w-full animate-scan" />
               <div className="relative z-10 flex flex-col items-center">
                 <Cpu className="text-indigo-500 animate-spin mb-4" size={40} />
-                <h3 className="text-lg font-bold text-[var(--text-main)]">AI is Analyzing...</h3>
-                <p className="text-sm text-[var(--text-soft)] mt-2 italic">Consulting career intelligence models</p>
+                <h3 className="text-lg font-bold text-(--text-main)">AI is Analyzing...</h3>
+                <p className="text-sm text-(--text-soft) mt-2 italic">Consulting career intelligence models</p>
               </div>
             </div>
           )}
@@ -105,7 +105,7 @@ function App() {
           {status === 'success' && (
             <div className="p-6 rounded-3xl bg-indigo-500/5 border border-indigo-500/20">
               <h4 className="text-sm font-bold text-indigo-600 mb-2 uppercase tracking-tight">System Status</h4>
-              <p className="text-xs text-[var(--text-soft)] leading-relaxed">
+              <p className="text-xs text-(--text-soft) leading-relaxed">
                 The analysis is complete. Our AI has identified {result?.strengths.length} strengths and {result?.missing_keywords.length} missing industry keywords.
               </p>
               <button onClick={reset} className="mt-4 text-xs font-bold text-indigo-500 hover:underline">← Analyze another document</button>
@@ -131,25 +131,26 @@ function App() {
 
               {/* Strengths & Weaknesses Grid (Kept as 2 cols for better use of space) */}
               <div className="grid gap-6 md:grid-cols-2">
-                <div className="p-6 rounded-3xl bg-emerald-500/[0.03] border border-emerald-500/10">
+                <div className="p-6 rounded-3xl bg-emerald-500/3 border border-emerald-500/10">
                   <h3 className="font-bold text-emerald-600 mb-4 flex items-center gap-2 text-sm uppercase">
                     <CheckCircle size={16} /> Key Assets
                   </h3>
                   <ul className="space-y-3">
                     {result.strengths.map((s, i) => (
-                      <li key={i} className="text-xs leading-relaxed text-[var(--text-main)] flex gap-2">
+                      <li key={i} className="text-xs leading-relaxed text-(--text-main) flex gap-2">
                         <span className="text-emerald-500">•</span> {s}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="p-6 rounded-3xl bg-rose-500/[0.03] border border-rose-500/10">
+                <div className="p-6 rounded-3xl bg-ro
+                se-500/[0.03] border border-rose-500/10">
                   <h3 className="font-bold text-rose-600 mb-4 flex items-center gap-2 text-sm uppercase">
                     <AlertCircle size={16} /> Gaps Found
                   </h3>
                   <ul className="space-y-3">
                     {result.weaknesses.map((w, i) => (
-                      <li key={i} className="text-xs leading-relaxed text-[var(--text-main)] flex gap-2">
+                      <li key={i} className="text-xs leading-relaxed text-(--text-main) flex gap-2">
                         <span className="text-rose-500">•</span> {w}
                       </li>
                     ))}
@@ -158,8 +159,8 @@ function App() {
               </div>
 
               {/* Keywords */}
-              <div className="p-6 rounded-3xl bg-[var(--card-bg)] border border-[var(--border-color)]">
-                <h3 className="font-bold text-[var(--text-main)] mb-4 text-sm flex items-center gap-2">
+              <div className="p-6 rounded-3xl bg-(--card-bg) border border-(--border-color)">
+                <h3 className="font-bold text-(--text-main) mb-4 text-sm flex items-center gap-2">
                   <Sparkles size={16} className="text-indigo-500" /> Optimize Keywords
                 </h3>
                 <div className="flex flex-wrap gap-2">

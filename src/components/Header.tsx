@@ -12,7 +12,7 @@ export default function Header() {
             to="/"
             className="group inline-flex items-center gap-2.5 rounded-xl bg-(--card-bg) px-4 py-2 text-sm font-bold text-(--text-main) no-underline transition-all hover:shadow-lg hover:shadow-indigo-500/10"
           >
-            <div className="relative flex h-6 w-6 items-center justify-center rounded-lg bg-linear-to-br from-indigo-500 to-purple-600 text-white shadow-sm">
+            {/* <div className="relative flex h-6 w-6 items-center justify-center rounded-lg bg-linear-to-br from-indigo-500 to-purple-600 text-white shadow-sm">
               <svg 
                 viewBox="0 0 24 24" 
                 fill="none" 
@@ -25,7 +25,9 @@ export default function Header() {
                 <path d="m15 7 2 2-2 2" />
                 <path d="m19 7-2 2 2 2" />
               </svg>
-            </div>
+            </div> */}
+
+            <img src="/Logo.png" alt="" width={30} />
             <span className="tracking-tight">Resume<span className="text-indigo-500">AI</span></span>
           </Link>
         </h2>
