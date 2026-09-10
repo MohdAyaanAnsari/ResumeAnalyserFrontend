@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://resumeanalyserbackend-lnr4.onrender.com/api', // Your backend base URL
+  baseURL: import.meta.env.VITE_API_URL ?? "http://localhost:5000",
   timeout: 30000, // AI analysis can take a while
 })
 
