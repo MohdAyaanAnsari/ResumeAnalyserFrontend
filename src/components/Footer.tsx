@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 font-bold text-(--text-main) text-xl">
               <img src="/Logo.png" alt="" width={30} />
-              <span className="tracking-tight">Resume<span className="text-indigo-500">AI</span></span>
+              <span className="tracking-tight text-indigo-500">CV <span className="text-white">Pilot</span></span>
             </div>
             <p className="text-sm leading-relaxed max-w-xs">
               A high-performance neural engine designed to optimize professional resumes for modern Applicant Tracking Systems (ATS).

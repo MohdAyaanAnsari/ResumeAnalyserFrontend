@@ -28,7 +28,7 @@ export default function Header() {
             </div> */}
 
             <img src="/Logo.png" alt="" width={30} />
-            <span className="tracking-tight">Resume<span className="text-indigo-500">AI</span></span>
+            <span className="tracking-tight text-indigo-500">CV <span className="text-white">Pilot</span></span>
           </Link>
         </h2>
 
